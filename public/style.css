@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+width: 18px;
+background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #5a7de4;
+border-radius: 1rem;
+}
+
+.body1 {
+background-color: #012332;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+background-size: 400px 400px;
+}
+
+#root {
+    width: 100vw;
+}
+
+@media only screen and (max-width: 500px) {
+.body1{
+    width: 100vw;
+}
+}
+
+
