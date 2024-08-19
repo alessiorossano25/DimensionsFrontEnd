@@ -98,7 +98,7 @@ return (
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
     >
-        <Box sx={{ ...style, width: 400, outline:"none" }}>
+        <Box sx={{ ...style, width: 400, outline: "none" }}>
         <div className="imgCard">
             <img
             className={
@@ -110,7 +110,7 @@ return (
         {user && (
             <div className="modifyPossession">
             <button className="possession" onClick={color}>
-            {zoomCard && zoomCard.mine ? "Posseduta" : "Non Posseduta"}
+                {zoomCard && zoomCard.mine ? "Posseduta" : "Non Posseduta"}
             </button>
             </div>
         )}
@@ -135,6 +135,20 @@ return (
                         className="cardList"
                         onClick={() => {
                         setZoomCard(card);
+                        }}
+                        style={{
+                        transition:
+                            "transform 0.2s ease, box-shadow 0.2s ease",
+                        cursor: "pointer",
+                        }}
+                        onMouseEnter={(event) => {
+                        event.currentTarget.style.transform = "scale(1.05)";
+                        event.currentTarget.style.boxShadow =
+                            "0px 4px 8px rgba(0, 0, 0, 0.2)";
+                        }}
+                        onMouseLeave={(event) => {
+                        event.currentTarget.style.transform = "scale(1)";
+                        event.currentTarget.style.boxShadow = "none";
                         }}
                     >
                         <img
