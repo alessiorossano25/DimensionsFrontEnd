@@ -1,6 +1,6 @@
 .form-control {
 width: 750px;
-margin-left: 100px;
+margin-left: 300px;
 }
 
 .utenteList {
@@ -12,17 +12,20 @@ background-image: url("https://www.transparenttextures.com/patterns/60-lines.png
 }
 
 .file{
-    margin-top: 10px;
+margin-top: 10px;
 }
 
+.avatarProfile{
+margin-left: 550px;
+}
 .utenteList h1 {
 text-shadow: -1.5px -1.5px 2px #000, 2px -1.5px 2px #000, -1.5px 2px 2px #000,
-    2px 2px 2px #000;
+2px 2px 2px #000;
 color: white;
 }
 .utentePlaceholder {
-margin-top: 20px;
-margin-left: 100px;
+margin-top: 40px;
+margin-left: 300px;
 text-shadow: 
 -1px -1px 1px #000, 
 2px -1px 1px #000, 
@@ -33,10 +36,10 @@ font-size: 30px;
 }
 
 .form-buttons {
-margin-top: 30px;
+margin-top: 60px;
 display: flex;
 gap: 20px;
-margin-left: 200px;
+margin-left: 500px;
 }
 
 .sx-dx {
@@ -78,6 +81,7 @@ margin-left:15px;
 display: flex;
 align-items: center;
 flex-direction: column;
+margin-left: 0;
 }
 
 .file{
@@ -92,6 +96,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
+margin-left: 0;
 }
 .avatar{
 max-width: 200px;

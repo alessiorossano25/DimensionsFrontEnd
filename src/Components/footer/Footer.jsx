@@ -17,16 +17,19 @@ return (
             <ion-icon name="logo-facebook"></ion-icon>
         </a>
         </li>
-        <li id="twitter">
-        <a href="https://x.com/?lang=it">
-            <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-        </li>
+
         <li id="twitch">
         <a href="https://www.twitch.tv/">
             <ion-icon name="logo-twitch"></ion-icon>
         </a>
         </li>
+        
+        <li id="github">
+        <a href="https://github.com/alessiorossano25">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+        </li>
+        
         <li id="linkedin">
         <a href="https://www.linkedin.com/in/alessio-rossano-94a0b8255/">
             <ion-icon name="logo-linkedin"></ion-icon>

@@ -17,7 +17,7 @@ import LoginContext from "../../Context/LoginContext";
 import { useNavigate } from "react-router-dom";
 
 
-const pages = ["HOME", "ESPANSIONI", "LORE", "GIOCO"];
+const pages = ["HOME", "ESPANSIONI", "LORE"];
 const settings = ["IL MIO PROFILO", "ESCI"];
 
 function ResponsiveAppBar() {
@@ -52,7 +52,6 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -135,15 +134,34 @@ function ResponsiveAppBar() {
             />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+          
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseUserMenu();
+                  navigate("/");}}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+              HOME
               </Button>
-            ))}
+
+              <Button
+                onClick={() => {
+                  handleCloseUserMenu();
+                  navigate("/expansions");}}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+              ESPANSIONI
+              </Button>
+
+              <Button
+                onClick={() => {
+                  handleCloseUserMenu();
+                  navigate("/lore");}}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+              lore
+              </Button>
+          
           </Box>
 
           {user ? (

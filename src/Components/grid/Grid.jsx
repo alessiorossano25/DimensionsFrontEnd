@@ -11,10 +11,10 @@ return (
         <img
             className="grid-img"
             src={grid1}
-            alt="una sezione che riporta alla nuova espansione"
+            alt="novità"
         ></img>
         <p className="testo-grid mt-2">
-            Nuova Espansione - Giudizio dei Ribelli : Anello della dispersione
+            Giudizio dei Ribelli in arrivo nella prossima espansione
         </p>
         </div>
     </div>
@@ -26,7 +26,7 @@ return (
             src={grid2}
             alt="una sezione che riporta al gioco Dimensions"
         ></img>
-        <p className="testo-grid mt-2">Gioca a Dimensions</p>
+        <p className="testo-grid mt-2">Sperimenta Dimensions con gli amici nel nuovo gioco online</p>
         </div>
     </div>
     </div>

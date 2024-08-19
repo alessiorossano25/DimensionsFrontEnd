@@ -18,9 +18,6 @@ border: 5px solid black;
     margin-right: 2%;
 }
 
-
-
-
 .grid-img {
 width: 100%;
 height: 470px;
@@ -31,6 +28,8 @@ object-fit: cover;
 .selector2:hover {
 transform: translateY(-10px);
 }
+
+
 
 @media only screen and (max-width: 500px) {
 .selector2 {
@@ -47,6 +46,6 @@ transform: translateY(-10px);
 
 @media only screen and (min-width: 501px) AND (max-width: 1000px)  {
 .grid-img{
-height: 400px;
+height: 410px;
 }
 }

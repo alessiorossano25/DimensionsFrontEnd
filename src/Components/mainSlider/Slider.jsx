@@ -13,10 +13,10 @@ const Slider = () => {
           <h3 className="testo-slider">
             Fiamme Ardenti: Esplosioni Celesti 
           </h3>
-          <p className="testo-slider">
+          <h5 className="testo-slider">
             Entra nel cuore infuocato dell'avventura, dove il potere delle
           fiamme prende vita
-          </p>
+          </h5>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -24,10 +24,10 @@ const Slider = () => {
         <img className="slides" src={image2} alt="seconda slide"></img>
         <Carousel.Caption>
           <h3 className="testo-slider">Cercatori del futuro: Connessioni Cibernetiche</h3>
-          <p className="testo-slider">
+          <h5 className="testo-slider">
             Scopri un mondo di innovazione e avventura nella nuova era
             tecnologica
-          </p>
+          </h5>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -35,10 +35,10 @@ const Slider = () => {
         <img className="slides" src={image3} alt="terza slide"></img>
         <Carousel.Caption>
           <h3 className="testo-slider">Valle d'Incanto: Segreti Nascosti </h3>
-          <p className="testo-slider">
+          <h5 className="testo-slider">
             Esplora le meraviglie nascoste nella Valle, dove il mistero si
             intreccia con la natura
-          </p>
+          </h5>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

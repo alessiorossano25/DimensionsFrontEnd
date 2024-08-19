@@ -42,8 +42,8 @@ transform: translateY(-10px);
 color: #1877f2;
 }
 
-#twitter a:hover {
-color: #1da1f2;
+#github a:hover {
+color: gray;
 }
 
 #twitch a:hover {

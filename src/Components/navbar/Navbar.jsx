@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 import bg from "../../assets/background.png";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import LoginContext from "../../Context/LoginContext";
 import { Dropdown } from "react-bootstrap";
 import Avatar from "react-avatar"; // Usa una libreria come react-avatar
@@ -14,8 +14,23 @@ const Navbar = (props) => {
   const { search, setSearch, showSearch } = props;
   const navigate = useNavigate();
   const { user, logout } = useContext(LoginContext);
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+  };
+  
+  window.addEventListener('resize', handleResize);
+  
+  return () => {
+      window.removeEventListener('resize', handleResize);
+  };
+  }, []);
 
-  return window.innerWidth < 1000 ? (
+  
+
+
+  return width < 1000 ? (
     <ResponsiveAppBar />
   ) : (
     <nav
