@@ -30,6 +30,11 @@ const UserProfile = () => {
   async function changeAvatar(event) {
     const body = new FormData();
     body.append("file", event.target.files[0])
+
+    if (file) {
+      const fileExtension = file.name.split('.').pop().toLowerCase();
+      const validExtensions = ['png', 'jpg', 'jpeg', 'webp'];
+      if (validExtensions.includes(fileExtension)) {
     try {
       setPageLoading(true);
       const response = await axios.post(
@@ -46,8 +51,11 @@ const UserProfile = () => {
       setPageLoading(false);
   } catch (error) {
       setPageLoading(false);
-
   }
+}
+} else {
+  console.log('Estensione non valida');
+}
 }
 
   useEffect(() => {
