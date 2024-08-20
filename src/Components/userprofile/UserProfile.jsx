@@ -33,6 +33,7 @@ const UserProfile = () => {
   }
 
   async function changeAvatar(event) {
+    const resetFile = event.target;
     const body = new FormData();
     const file = event.target.files[0];
     if (file) {
@@ -57,7 +58,8 @@ const UserProfile = () => {
           setPageLoading(false);
         } catch (error) {
           setPageLoading(false);
-        }
+      } finally {
+        resetFile.value = null;
       }
     } else {
       console.log("Estensione non valida");
