@@ -64,7 +64,7 @@ const UserProfile = () => {
     } else {
       console.log("Estensione non valida");
     }
-  }
+  }}
 
   useEffect(() => {
     loadUser();
@@ -199,6 +199,6 @@ const UserProfile = () => {
     </div>
   );
 };
-}
+
 
 export default UserProfile;
