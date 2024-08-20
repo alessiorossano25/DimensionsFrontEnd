@@ -5,7 +5,12 @@ import axios from "axios";
 
 const UserProfile = () => {
   const [pageLoading, setPageLoading] = useState(false);
-  const { user, setUser, profile: profileContext, loading } = useContext(LoginContext);
+  const {
+    user,
+    setUser,
+    profile: profileContext,
+    loading,
+  } = useContext(LoginContext);
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -29,34 +34,35 @@ const UserProfile = () => {
 
   async function changeAvatar(event) {
     const body = new FormData();
-    body.append("file", event.target.files[0])
-
+    const file = event.target.files[0];
     if (file) {
-      const fileExtension = file.name.split('.').pop().toLowerCase();
-      const validExtensions = ['png', 'jpg', 'jpeg', 'webp'];
+      body.append("file", file)
+      const fileExtension = file.name.split(".").pop().toLowerCase();
+      const validExtensions = ["png", "jpg", "jpeg", "webp"];
       if (validExtensions.includes(fileExtension)) {
-    try {
-      setPageLoading(true);
-      const response = await axios.post(
-      process.env.REACT_APP_BACKEND + "/auth/changeAvatar",
-      body,{
-          headers: {
-          "Content-Type": "multipart/form-data",
+        try {
+          setPageLoading(true);
+          const response = await axios.post(
+            process.env.REACT_APP_BACKEND + "/auth/changeAvatar",
+            body,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
 
-          "Authorization": "Bearer " + localStorage.getItem("token"),
-          },
+                Authorization: "Bearer " + localStorage.getItem("token"),
+              },
+            }
+          );
+          setUser(response.data);
+          setPageLoading(false);
+        } catch (error) {
+          setPageLoading(false);
+        }
       }
-      );
-      setUser(response.data);
-      setPageLoading(false);
-  } catch (error) {
-      setPageLoading(false);
+    } else {
+      console.log("Estensione non valida");
+    }
   }
-}
-} else {
-  console.log('Estensione non valida');
-}
-}
 
   useEffect(() => {
     loadUser();
@@ -86,10 +92,15 @@ const UserProfile = () => {
           <img
             src={"assets/Avatar/" + user.img}
             className="avatar img-circle img-thumbnail"
-            alt="avatar" onError={(event) => event.target.src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png"}
+            alt="avatar"
+            onError={(event) =>
+              (event.target.src =
+                "http://ssl.gstatic.com/accounts/ui/avatar_2x.png")
+            }
           />
           <input
-            type="file" onChange={changeAvatar}
+            type="file"
+            onChange={changeAvatar}
             className="file center-block file-upload custom-file-input"
           />
         </div>
