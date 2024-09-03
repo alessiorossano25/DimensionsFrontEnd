@@ -64,7 +64,7 @@ const Navbar = (props) => {
         {showSearch && (
           <input
             type="search"
-            className="input dark"
+            className="input rounded dark"
             placeholder="Cerca una carta..."
             value={search}
             onChange={(event) => setSearch(event.target.value)}
