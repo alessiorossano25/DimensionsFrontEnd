@@ -32,6 +32,9 @@ const UserProfile = () => {
     }
   }
 
+
+  const [imgError, setImgError] = useState("")
+
   async function changeAvatar(event) {
     const resetFile = event.target;
     const body = new FormData();
@@ -56,8 +59,10 @@ const UserProfile = () => {
           );
           setUser(response.data);
           setPageLoading(false);
+          setImgError("")
         } catch (error) {
           setPageLoading(false);
+          setImgError("L'immagine è troppo grande, scegline una più piccola")
       } finally {
         resetFile.value = null;
       }
@@ -100,6 +105,7 @@ const UserProfile = () => {
                 "http://ssl.gstatic.com/accounts/ui/avatar_2x.png")
             }
           />
+          {imgError && imgError != "" && <div>{imgError}</div>}
           <input
             type="file"
             onChange={changeAvatar}
