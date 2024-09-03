@@ -171,7 +171,7 @@ const UserProfile = () => {
               <input
                 type="password"
                 onChange={change}
-                name="password"
+                name="confirmPassword"
                 value={formData.confirmPassword}
                 className="form-control"
               />
