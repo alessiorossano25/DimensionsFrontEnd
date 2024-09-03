@@ -113,7 +113,7 @@ const UserProfile = () => {
           />
         </div>
 
-        <div className="col-sm-9 col-md-12">
+        <div className="col-sm-9 col-md-12" style={{marginTop : "40px"}}>
           <form className="form" onSubmit={profile}>
             <div className="form-group col-xs-6">
               <label for="name">
